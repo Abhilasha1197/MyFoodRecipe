@@ -1,3 +1,4 @@
+
 import Axios from "axios";
 import "./App.css";
 import { useState } from "react";
@@ -28,7 +29,8 @@ function App() {
   }
 
   function myRecipes(e) {
-    getRecipes(e.target.value)
+    setQuery(e.target.value)
+    getRecipes(query)
   }
 
   return (
@@ -68,6 +70,7 @@ function App() {
           })}
         </div>
       </div>
+      
     </div>
   );
 }
